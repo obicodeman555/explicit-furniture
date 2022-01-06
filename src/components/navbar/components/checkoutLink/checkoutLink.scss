@@ -1,0 +1,9 @@
+.checkout,
+.checkout > a {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  & > span:nth-child(2) {
+    margin-left: 0.25em;
+  }
+}

@@ -1,0 +1,23 @@
+.cart {
+  position: relative;
+  width: 200px;
+  display: flex;
+  align-items: center;
+
+  & > a {
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+    cursor: pointer;
+    gap: 0.35rem;
+  }
+}
+
+.image__box {
+  display: flex;
+
+  svg {
+    font-size: 25px;
+  }
+}

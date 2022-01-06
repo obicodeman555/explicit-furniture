@@ -1,0 +1,125 @@
+@use "../../sass/animations" as *;
+
+$color-green: #30c518;
+
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 395px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(231, 166, 231, 0.219),
+    rgba(238, 168, 128, 0.3575),
+    rgba(230, 194, 116, 0.393)
+  );
+
+  //sidebar slide in style
+  &.slideIn {
+    transition: transform 0.5s cubic-bezier(1, 1.56, 0.07, 1.13);
+    transform: translateX(0);
+  }
+
+  //sidebar slide out style
+  &.slideOut {
+    transition: transform 0.5s cubic-bezier(1, 1.56, 0.07, 1.13);
+    transform: translateX(-100%);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(231, 166, 231, 0.219),
+      rgba(253, 93, 0, 0.358),
+      rgba(250, 194, 74, 0.393)
+    );
+  }
+
+  .sidebarLogo__link {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      width: 60px;
+      & > img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  //bigger fontsize and lager image for link on the sidebar
+  &--largerIcon {
+    .image__box > img {
+      width: 50px;
+    }
+  }
+
+  &--biggerFont {
+    .large--text {
+      font-size: 1.315em;
+    }
+  }
+  #sideBar__accountBtn {
+    .account__text {
+      font-size: 1.75em;
+
+      &:hover {
+        color: $color-green;
+      }
+    }
+  }
+
+  //style:close toggle btn
+  .sidebar__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 38px;
+    & > button {
+      cursor: pointer;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      outline: none;
+      width: 100%;
+      border: 0;
+      font-family: inherit;
+
+      & > img {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    &__actionName {
+      color: #313030;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+.sidebar__nav__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .sidebar__nav__item {
+    margin: 2em 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.062);
+    padding-bottom: 0.35em;
+  }
+}

@@ -1,0 +1,41 @@
+@use "../sass/index" as *;
+
+.error_404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  height: 100vh;
+  background-image: linear-gradient(
+    -16deg,
+    rgba(0, 0, 0, 0.015),
+    rgba(85, 99, 37, 0.219),
+    rgba(0, 0, 0, 0.1025)
+  );
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: none;
+  }
+
+  p {
+    max-width: 300px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.image__404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5em;
+
+  & > img {
+    width: 80%;
+  }
+}

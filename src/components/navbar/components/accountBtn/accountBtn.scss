@@ -1,0 +1,29 @@
+.account,
+.account__btn {
+  display: flex;
+  align-items: center;
+}
+
+.account {
+  width: 200px;
+}
+
+.chevronDown__icon {
+  padding-top: 0.35em;
+}
+
+.account > .account__btn {
+  font-weight: 600;
+  cursor: pointer;
+  gap: 0.35rem;
+  margin-right: 2em;
+  font-family: inherit;
+  padding: 0.55em;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  span {
+    display: flex;
+    align-items: center;
+  }
+}

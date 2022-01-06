@@ -1,0 +1,17 @@
+.market__nav__link {
+  display: flex;
+  width: 200px;
+}
+
+.market__link__text {
+  margin-left: 0.25em;
+}
+.market__link,
+.market__link__text {
+  display: flex;
+  align-items: center;
+
+  &__icon > img {
+    width: 30px;
+  }
+}

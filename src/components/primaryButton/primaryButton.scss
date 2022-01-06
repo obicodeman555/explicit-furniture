@@ -1,0 +1,36 @@
+.primaryButton__container {
+  display: flex;
+  width: 150px;
+
+  &--button {
+    width: 100%;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    padding: 0.95em;
+    background-image: radial-gradient(
+      3.5rem circle at bottom right,
+      rgba(255, 177, 255, 0.404),
+      rgba(241, 151, 99, 0.829),
+      #3f51a2,
+      #000
+    );
+    background-repeat: no-repeat;
+    color: rgb(214, 211, 211);
+    border: 2px solid transparent;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
+    animation-name: shake;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    letter-spacing: 0.5px;
+    transition: color 2.5s, border 0.3s ease;
+  }
+
+  &--button:hover {
+    color: #fff;
+    background-color: #3f51a2;
+    border: 2px solid #000;
+    border-radius: 5px 5px 5px 0px;
+  }
+}
