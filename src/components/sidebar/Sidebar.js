@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import MarketLink from "../navbar/components/marketLink";
@@ -11,7 +11,7 @@ import { useProductsContext } from "../../context/products_context";
 
 import "./sidebar.scss";
 
-const Sidebar = (props) => {
+const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
 
   return (

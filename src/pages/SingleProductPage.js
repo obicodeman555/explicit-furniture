@@ -19,6 +19,7 @@ const SingleProductPage = () => {
   //fecth single product pertaining to given id
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   //return to homepage of there is an error
@@ -28,6 +29,7 @@ const SingleProductPage = () => {
         history.push("/");
       }, 3000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [error]);
 
   if (loading) {
@@ -65,11 +67,11 @@ const SingleProductPage = () => {
         <p>{description}</p>
         <p className="info">
           <span>Available:</span>
-          {stock > 0 ? "in stock" : "out of stock"}
+          <span>{stock > 0 ? "in stock" : "out of stock"}</span>
         </p>
         <p className="info">
-          <span>Brand:</span>
-          {company}
+          <span>Brand: {company}</span>
+          <span>SKU:{sku}</span>
         </p>
         <div className="singleProduct__addToCart">
           {stock > 0 && <AddToCart />}
