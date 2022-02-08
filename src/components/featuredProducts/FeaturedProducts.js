@@ -4,6 +4,7 @@ import { useProductsContext } from "../../context/products_context";
 // import { Link } from "react-router-dom";
 import Error from "../error/Error";
 import Product from "../product/Product";
+import "./featuredProducts.scss";
 
 const FeaturedProducts = () => {
   const {
@@ -21,13 +22,13 @@ const FeaturedProducts = () => {
   }
 
   return (
-    <section>
+    <section className="featuredProducts">
       <h1>Featured Products</h1>
-      <main>
+      <article className="featured__item">
         {featured.slice(0, 3).map((product) => {
           return <Product key={product.id} {...product} />;
         })}
-      </main>
+      </article>
     </section>
   );
 };
