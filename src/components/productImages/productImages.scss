@@ -1,0 +1,7 @@
+.gallery__image {
+  border: 2px solid transparent;
+  cursor: pointer;
+  &.active {
+    border: 2px solid red;
+  }
+}
