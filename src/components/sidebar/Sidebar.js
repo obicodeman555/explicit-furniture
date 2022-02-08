@@ -32,20 +32,47 @@ const Sidebar = (props) => {
       </div>
 
       <nav className="sidebar__nav__links">
-        <div className="sidebar__nav__item" onClick={closeSidebar}>
+        <div
+          className={`${
+            isSidebarOpen
+              ? "sidebar__nav__item animatedTranslation"
+              : "sidebar__nav__item"
+          }`}
+          onClick={closeSidebar}
+        >
           <MarketLink className="sidebar--biggerFont sidebar--largerIcon" />
         </div>
-        <div className="sidebar__nav__item">
+        <div
+          className={`${
+            isSidebarOpen
+              ? "sidebar__nav__item animatedTranslation"
+              : "sidebar__nav__item"
+          }`}
+        >
           <AccountBtn
             className="sidebar--biggerFont sidebar--largerIcon"
             id="sideBar__accountBtn"
           />
         </div>
 
-        <div className="sidebar__nav__item" onClick={closeSidebar}>
+        <div
+          className={`${
+            isSidebarOpen
+              ? "sidebar__nav__item animatedTranslation"
+              : "sidebar__nav__item"
+          }`}
+          onClick={closeSidebar}
+        >
           <CheckoutLink className="sidebar--biggerFont sidebar--largerIcon" />
         </div>
-        <div className="sidebar__nav__item" onClick={closeSidebar}>
+        <div
+          className={`${
+            isSidebarOpen
+              ? "sidebar__nav__item animatedTranslation"
+              : "sidebar__nav__item"
+          }`}
+          onClick={closeSidebar}
+        >
           <CartLink className="sidebar--biggerFont sidebar--largerIcon" />
         </div>
       </nav>

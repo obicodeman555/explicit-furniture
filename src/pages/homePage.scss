@@ -1,0 +1,73 @@
+//100vh on large screens
+
+.main__container {
+  height: 100vh;
+}
+
+//assumes 100% of the parents height
+.hero__one__container {
+  height: 100%;
+  position: relative;
+  padding: 5em;
+}
+
+//
+.hero__backgroundImage {
+  display: flex;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("https://media.istockphoto.com/photos/books-and-vases-on-retro-cabinet-next-to-comfortable-sofa-with-picture-id1098281948?k=20&m=1098281948&s=612x612&w=0&h=mGogQMFAq0Rxs2gfQ8l2IjP4KU8Ow6MINNWDa42fFfw=");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+//flex container
+.hero__transparentCard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+//content
+.hero__content {
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.768);
+  padding: 4em;
+  border-radius: 10px 20px 0px;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(255, 2555, 255, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+//reuasbales
+.mxWidth-60 {
+  max-width: 80%;
+}
+
+.line__height-20 {
+  line-height: 60px;
+}
+
+.text__bold {
+  font-weight: 500;
+}
+
+.text__gray {
+  color: rgb(136, 135, 135);
+}
+
+.hero__transparentCard__body_introText {
+  text-align: justify;
+  margin-bottom: 1em;
+}

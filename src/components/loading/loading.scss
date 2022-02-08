@@ -1,0 +1,33 @@
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212d52;
+
+  .gears {
+    position: relative;
+  }
+
+  .rotating__gear {
+    position: absolute;
+    display: flex;
+    animation: spinaround 5s infinite;
+    animation-fill-mode: both;
+
+    &:nth-child(1) {
+      top: -3rem;
+      right: -8.5rem;
+    }
+  }
+}
+
+@keyframes spinaround {
+  to {
+    transform: rotate(360deg);
+  }
+}

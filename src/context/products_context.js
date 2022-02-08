@@ -52,6 +52,8 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  //fetch single product
+
   const fetchSingleProduct = async (url) => {
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
