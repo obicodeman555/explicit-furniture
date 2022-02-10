@@ -1,6 +1,6 @@
 import React from "react";
-import accountIcon from "../../../../assets/account.png";
-import chevronDown from "../../../../assets/chevron_down.png";
+import accountIcon from "../../../../assets/account-notlogged-icon.svg";
+import chevronDown from "../../../../assets/arrow-down-circle.svg";
 import "./accountBtn.scss";
 const AccountBtn = (props) => {
   return (

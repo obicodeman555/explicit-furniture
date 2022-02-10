@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsCart3 } from "react-icons/bs";
+import cart from "../../../../assets/cart.svg";
 import "./cartLink.scss";
 const CarLink = (props) => {
   return (
     <div className={`cart ${props.className}`} id={props.id}>
       <Link to="/cart" className="font__primary w600">
         <span className="cartIcon__container image__box">
-          <BsCart3 />
+          <img src={cart} alt="cart" />
         </span>
         <span className="cart__text large--text">
           <span>Cart</span>

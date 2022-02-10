@@ -1,3 +1,5 @@
+@use "../../sass/index" as *;
+
 //REDUCED WIDTH TO ENABLE ITEMS CENTER WITHIN GRID ITEM
 .product__imageBox {
   height: 300px;
@@ -18,9 +20,12 @@
   align-items: center;
 
   &__container {
+    @include primaryCardShadow;
+    background-color: #fff;
     inline-size: calc(100% - 150px);
-    padding-bottom: 1em;
+    padding-inline: 0.3em;
     transition: 0.3s cubic-bezier(0.19, -1, 0.22, -1);
+    border-radius: 4px;
     //spacing bottom on all container child elenment
     & > * {
       margin-bottom: 0.5em;
@@ -28,7 +33,6 @@
   }
 
   &__container:hover {
-    padding: 0.3em 1em;
     box-shadow: 0 12px 12px -11px #212d52fd;
   }
 }
@@ -58,7 +62,7 @@
     background-color: #212d52;
     color: white;
     padding: 0.65em;
-    box-shadow: 0 12px 12px -11px #212d52fd;
+    @include primaryBtnShadow;
     border-radius: 3px;
   }
 }

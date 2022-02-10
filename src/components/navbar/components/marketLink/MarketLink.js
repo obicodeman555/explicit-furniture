@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import basket from "../../../../assets/bags.png";
+import basket from "../../../../assets/shopping-bag.svg";
 import "./marketLink.scss";
 
 const MarketLink = (props) => {
