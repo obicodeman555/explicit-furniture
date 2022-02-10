@@ -1,3 +1,12 @@
 @mixin animationShake {
   animation: shake 500ms ease-in-out forwards;
 }
+
+@mixin primaryBtnShadow {
+  box-shadow: 0 12px 12px -11px #212d52fd;
+}
+
+@mixin primaryCardShadow {
+  -webkit-box-shadow: 0 5px 10px 2px rgba(195, 192, 192, 0.2);
+  box-shadow: 0 5px 10px 2px rgba(195, 192, 192, 0.2);
+}

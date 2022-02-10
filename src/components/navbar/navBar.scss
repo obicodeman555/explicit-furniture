@@ -1,21 +1,23 @@
 .nav {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 177, 255, 0.219),
-    rgba(241, 151, 99, 0.358),
-    rgba(241, 188, 72, 0.37)
-  );
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  //
   .header__nav {
     width: 80%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     padding: 0.65em 0;
+    color: #fff;
   }
 
-  .image__container {
-    width: 40px;
+  .header__navLogo {
+    width: 60px;
     margin-right: auto;
     img {
       width: 100%;
@@ -24,6 +26,7 @@
   #navBar__marketLink {
     margin-left: auto;
     margin-right: auto;
+
     .market__link__Icon > img {
       width: 32px;
     }
@@ -48,7 +51,7 @@
     border: 0;
     font-size: 1.75rem;
     cursor: pointer;
-    color: #000;
+    color: bisque;
 
     &:hover {
       transition: color 0.5s linear;

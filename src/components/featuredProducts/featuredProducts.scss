@@ -1,20 +1,17 @@
 .featuredProducts {
-  padding-block-start: 2em;
-  padding-block-end: 4em;
-  & > h1 {
-    font-size: 1.55rem;
+  background-color: rgba(146, 146, 146, 0.165);
 
+  & > h1 {
+    font-size: 2rem;
     text-align: center;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    padding-block: 1em;
   }
 }
 
 .featured__item {
   max-width: 70%;
   margin-inline: auto;
-
+  padding-bottom: 2em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 400px;
 }

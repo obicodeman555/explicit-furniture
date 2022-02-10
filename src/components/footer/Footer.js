@@ -48,9 +48,11 @@ const Footer = () => {
             <div className="item__container">
               <p className="item__title">shop</p>
               <div className="footer__socialLinks">
-                <Link className="animation--shake">Phone Market</Link>
+                <Link className="animation--shake">
+                  Family Furniture Market
+                </Link>
 
-                <Link>Laptop Market</Link>
+                <Link>Office Furniture Market</Link>
 
                 <Link>Wholesale</Link>
 
