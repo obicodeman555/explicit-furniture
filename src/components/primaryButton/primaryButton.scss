@@ -2,14 +2,16 @@
 
 .primaryButton__container {
   display: flex;
-  width: 120px;
+  min-width: 130px;
+  max-width: 120px;
 
   &--button {
+    font-family: inherit;
     cursor: pointer;
     width: 100%;
     font-weight: 500;
     font-size: 14px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: 0.75px;
     padding: 0.85em;
     background-image: radial-gradient(
