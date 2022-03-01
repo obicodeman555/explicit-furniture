@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BsArrowLeft } from "react-icons/bs";
 import "./singleProduct.scss";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
@@ -56,27 +57,57 @@ const SingleProductPage = () => {
   return (
     <section className="singleProduct">
       <div className="products__link">
-        <Link to="/products">back to products</Link>
+        <Link to="/products">
+          <BsArrowLeft />
+          <span>back to products</span>
+        </Link>
       </div>
       <div className="singleProduct__container">
         <div className="product__images">
           <ProductImages images={images} />
         </div>
-        <div className="content">
+        <div className="singleProduct__details">
           <h3>{name}</h3>
           <Stars stars={stars} reviews={reviews} />
           <h5>{formatPrice(price)}</h5>
-          <p>{description}</p>
-          <p className="info">
-            <span>Available:</span>
+          <p className="singleProduct__desc">{description}</p>
+          <p className="singleProduct__availability">
+            <span className="blue-variant fw-500">Available:</span>
             <span>{stock > 0 ? "in stock" : "out of stock"}</span>
           </p>
-          <p className="info">
-            <span>Brand: {company}</span>
-            <span>SKU:{sku}</span>
+          <p className="singleProduct__info">
+            <span>
+              <span className="blue-variant fw-500">Brand:</span>
+              <span>{company}</span>
+            </span>
+            <span>
+              <span className="blue-variant fw-500">SKU:</span>
+              <span>{sku}</span>
+            </span>
           </p>
-          <div className="singleProduct__addToCart">
-            {stock > 0 && <AddToCart />}
+          <div className="singleProduct__cta">
+            <div class="quantity">
+              <button type="button" className="plus quantity__button">
+                +
+              </button>
+              <input
+                type="number"
+                className="quantity__inputText"
+                step="1"
+                min="1"
+                max="15"
+                name="quantity"
+                value="1"
+                title="Qty"
+                size="4"
+                placeholder=""
+                inputmode="numeric"
+              />
+              <button type="button" className="minus quantity__button">
+                -
+              </button>
+            </div>
+            <div>{stock > 0 && <AddToCart />}</div>
           </div>
         </div>
       </div>

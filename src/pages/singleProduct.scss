@@ -1,5 +1,12 @@
 .products__link {
   margin: 2em 0;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 600;
+  }
 }
 
 .singleProduct {
@@ -15,4 +22,91 @@
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
   }
+}
+
+.singleProduct__details {
+  h5 {
+    font-size: 24px;
+    color: rgb(65, 158, 52);
+  }
+}
+.singleProduct__desc {
+  font-weight: 400;
+  font-size: 1.15rem;
+  max-width: 500px;
+  text-align: justify;
+}
+
+.singleProduct__info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em;
+}
+
+.singleProduct__cta {
+  display: flex;
+}
+
+.quantity {
+  width: 80px;
+  position: relative;
+  display: flex;
+  border: 1px solid #ccc !important;
+  margin-right: 7px;
+
+  &__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 20px;
+    right: 0;
+    font-weight: 400;
+    font-size: 25px;
+    border: 0;
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .plus {
+    top: 0;
+    border-bottom: 1px solid #ccc;
+    z-index: 99;
+  }
+
+  .minus {
+    bottom: 0;
+  }
+  &__inputText {
+    width: calc(100% - 30px);
+    border: 0;
+    position: relative;
+    padding-left: 18px;
+    font-size: 18px;
+    border-right: 1px solid #ccc;
+    font-family: inherit;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.blue-variant {
+  color: #2f9bff;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
