@@ -5,9 +5,7 @@ import "./primaryLink.scss";
 const PrimaryLink = (props) => {
   return (
     <div className="primaryLink__container">
-      <Link to={props.to} className="primaryLink__container--href">
-        {props.linkText}
-      </Link>
+      <Link to={props.to}>{props.linkText}</Link>
     </div>
   );
 };

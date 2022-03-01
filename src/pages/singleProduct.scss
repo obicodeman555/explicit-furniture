@@ -1,0 +1,18 @@
+.products__link {
+  margin: 2em 0;
+}
+
+.singleProduct {
+  width: 86%;
+  margin: 0 auto;
+}
+
+.singleProduct__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}

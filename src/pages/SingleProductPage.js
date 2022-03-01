@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./singleProduct.scss";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { single_product_url as url } from "../utils/constants";
@@ -53,28 +54,30 @@ const SingleProductPage = () => {
     images,
   } = product;
   return (
-    <section>
-      <div>
+    <section className="singleProduct">
+      <div className="products__link">
         <Link to="/products">back to products</Link>
       </div>
-      <div className="product__images">
-        <ProductImages images={images} />
-      </div>
-      <div className="content">
-        <h3>{name}</h3>
-        <Stars stars={stars} reviews={reviews} />
-        <h5>{formatPrice(price)}</h5>
-        <p>{description}</p>
-        <p className="info">
-          <span>Available:</span>
-          <span>{stock > 0 ? "in stock" : "out of stock"}</span>
-        </p>
-        <p className="info">
-          <span>Brand: {company}</span>
-          <span>SKU:{sku}</span>
-        </p>
-        <div className="singleProduct__addToCart">
-          {stock > 0 && <AddToCart />}
+      <div className="singleProduct__container">
+        <div className="product__images">
+          <ProductImages images={images} />
+        </div>
+        <div className="content">
+          <h3>{name}</h3>
+          <Stars stars={stars} reviews={reviews} />
+          <h5>{formatPrice(price)}</h5>
+          <p>{description}</p>
+          <p className="info">
+            <span>Available:</span>
+            <span>{stock > 0 ? "in stock" : "out of stock"}</span>
+          </p>
+          <p className="info">
+            <span>Brand: {company}</span>
+            <span>SKU:{sku}</span>
+          </p>
+          <div className="singleProduct__addToCart">
+            {stock > 0 && <AddToCart />}
+          </div>
         </div>
       </div>
     </section>

@@ -39,9 +39,12 @@
 
 //Image
 .hero__content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and(max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .hero__rightContent {

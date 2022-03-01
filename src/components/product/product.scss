@@ -52,17 +52,3 @@
     font-size: calc(100% + 5px);
   }
 }
-
-//this style is resuable create a componanet of it
-.product__details--cta {
-  display: flex;
-
-  & > a {
-    font-size: calc(100% - 2px);
-    background-color: #212d52;
-    color: white;
-    padding: 0.65em;
-    @include primaryBtnShadow;
-    border-radius: 3px;
-  }
-}
