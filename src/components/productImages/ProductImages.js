@@ -12,20 +12,8 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
   };
 
   return (
-    <section>
-      <div className="main__image">
-        <img src={main.url} alt="main single product photograph" />
-        <button>
-          <FcPrevious className="sliderToggler sliderToggler--left" />
-        </button>
-        <button
-          className="sliderToggler sliderToggler--right"
-          onClick={moveToNextImage}
-        >
-          <FcNext />
-        </button>
-      </div>
-      <div className="gallery">
+    <section className="singleProduct__images">
+      <div className="singleProduct__galleries">
         {images.map((image, index) => {
           return (
             <img
@@ -39,6 +27,20 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
             />
           );
         })}
+      </div>
+      <div className="singleProduct__main__image">
+        <img src={main.url} alt="main single product photograph" />
+        <div className="slideImage__button__container">
+          <button className="sliderToggler sliderToggler--left">
+            <FcPrevious />
+          </button>
+          <button
+            className="sliderToggler sliderToggler--right"
+            onClick={moveToNextImage}
+          >
+            <FcNext />
+          </button>
+        </div>
       </div>
     </section>
   );

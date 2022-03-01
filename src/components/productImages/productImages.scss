@@ -1,7 +1,91 @@
 .gallery__image {
-  border: 2px solid transparent;
   cursor: pointer;
   &.active {
-    border: 2px solid red;
+    border: 2px solid rgb(245, 122, 122);
   }
 }
+
+.singleProduct__images {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 2em;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.singleProduct__galleries {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  width: 120px;
+  aspect-ratio: 1/1;
+
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  //small devices
+  @media screen and (max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: unset;
+  }
+}
+
+.singleProduct__main__image {
+  position: relative;
+  display: flex;
+  max-width: 700px;
+  aspect-ratio: 1/1;
+  width: 100%;
+
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+//
+
+.slideImage__button__container {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.sliderToggler {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.55);
+
+  & > svg {
+    font-size: 25px;
+    font-weight: 700;
+
+    polygon {
+      fill: #000;
+    }
+  }
+}
+
+// .sliderToggler--left {
+//   left: 0;
+// }
+
+// .sliderToggler--right {
+//   right: 0;
+// }
