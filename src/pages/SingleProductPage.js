@@ -85,30 +85,8 @@ const SingleProductPage = () => {
               <span>{sku}</span>
             </span>
           </p>
-          <div className="singleProduct__cta">
-            <div class="quantity">
-              <button type="button" className="plus quantity__button">
-                +
-              </button>
-              <input
-                type="number"
-                className="quantity__inputText"
-                step="1"
-                min="1"
-                max="15"
-                name="quantity"
-                value="1"
-                title="Qty"
-                size="4"
-                placeholder=""
-                inputmode="numeric"
-              />
-              <button type="button" className="minus quantity__button">
-                -
-              </button>
-            </div>
-            <div>{stock > 0 && <AddToCart />}</div>
-          </div>
+
+          <div>{stock > 0 && <AddToCart product={product} />}</div>
         </div>
       </div>
     </section>
