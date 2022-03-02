@@ -6,8 +6,15 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
   const [main, setMain] = useState(images[0]);
   const [counter, setCounter] = useState(0);
 
+  let lastIndex = images.length - 1;
+
   const moveToNextImage = () => {
-    setCounter((prev) => (prev < images.length ? prev + 1 : prev));
+    setCounter(counter === lastIndex ? 0 : counter + 1);
+    setMain(images[counter]);
+  };
+
+  const moveToPreviousImage = () => {
+    setCounter(counter < 1 ? lastIndex : counter - 1);
     setMain(images[counter]);
   };
 
@@ -31,7 +38,10 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
       <div className="singleProduct__main__image">
         <img src={main.url} alt="main single product photograph" />
         <div className="slideImage__button__container">
-          <button className="sliderToggler sliderToggler--left">
+          <button
+            className="sliderToggler sliderToggler--left"
+            onClick={moveToPreviousImage}
+          >
             <FcPrevious />
           </button>
           <button

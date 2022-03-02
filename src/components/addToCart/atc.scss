@@ -1,0 +1,35 @@
+.color-btn {
+  border: 0;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgb(116, 116, 116);
+  opacity: 0.5;
+  cursor: pointer;
+
+  //centering button contained svg element
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 0.75rem;
+    color: #fff;
+  }
+}
+.color {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.color-btn__container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: 1em;
+}
+
+.active {
+  opacity: 1;
+}

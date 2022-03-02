@@ -1,6 +1,6 @@
 .featuredProducts {
-  background-color: rgba(146, 146, 146, 0.165);
-
+  background-color: #e0e4ee;
+  padding-bottom: 2em;
   & > h1 {
     font-size: 2rem;
     text-align: center;
@@ -9,9 +9,15 @@
 }
 
 .featured__item {
-  max-width: 70%;
+  max-width: 60%;
   margin-inline: auto;
-  padding-bottom: 2em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  gap: 3em;
+  // grid-auto-rows: 420px;
 }
