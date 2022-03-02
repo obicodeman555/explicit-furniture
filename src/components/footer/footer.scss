@@ -4,18 +4,17 @@ $color-green: #30c518;
 $color-blue: #04194f;
 
 .footer {
+  background-image: linear-gradient(
+    -16deg,
+    rgba(0, 0, 0, 0.015),
+    rgba(85, 99, 37, 0.219),
+    rgba(0, 0, 0, 0.1025)
+  );
   &__content {
     padding: 4em 0 1em 0;
     font-size: 0.85rem;
     font-weight: 450;
     color: $footer-color;
-    height: 100vh;
-    background-image: linear-gradient(
-      -16deg,
-      rgba(0, 0, 0, 0.015),
-      rgba(85, 99, 37, 0.219),
-      rgba(0, 0, 0, 0.1025)
-    );
 
     a {
       color: $footer-color;
