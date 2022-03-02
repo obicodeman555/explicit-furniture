@@ -7,7 +7,7 @@ import "./atc.scss";
 //functional component
 const AddToCart = ({ product }) => {
   const { stock, colors } = product;
-  console.log(colors);
+
   const [mainColor, setMainColor] = useState(colors[0]);
   const [quantity, setQuantity] = useState(1);
 
