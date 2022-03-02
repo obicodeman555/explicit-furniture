@@ -31,7 +31,7 @@ export const FilterProvider = (props) => {
 
   return (
     <FilterContext.Provider value={{ ...state }}>
-      {props.childern}
+      {props.children}
     </FilterContext.Provider>
   );
 };
