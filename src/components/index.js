@@ -9,7 +9,13 @@ import Tooltip from "./tooltip/Tooltip";
 import ProductImages from "./productImages";
 import Stars from "./stars";
 import AddToCart from "./addToCart/AddToCart";
+import ProductsList from "./productsList/ProductsList";
+import Sort from "./sort/Sort";
+import Filters from "./filters/Filters";
+import ListView from "./listView/ListView";
+import GridView from "./gridView/GridView";
 
+//exports
 export {
   Footer,
   Navbar,
@@ -22,4 +28,9 @@ export {
   ProductImages,
   Stars,
   AddToCart,
+  ProductsList,
+  Sort,
+  Filters,
+  ListView,
+  GridView,
 };

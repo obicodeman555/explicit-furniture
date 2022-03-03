@@ -1,7 +1,15 @@
-import { Sidebar, Navbar, Footer } from "../components";
+import {
+  Sidebar,
+  Navbar,
+  Footer,
+  ProductsList,
+  Filters,
+  Sort,
+} from "../components";
 import { useProductsContext } from "../context/products_context";
 import Loading from "../components/loading";
 import Error from "../components/error";
+import "./productsPage.scss";
 
 const ProductsPage = () => {
   /*
@@ -21,7 +29,15 @@ const ProductsPage = () => {
         ) : error ? (
           <Error />
         ) : (
-          <main>List of Products will be display here</main>
+          <main className="allProducts">
+            <div className="allProducts__container">
+              <Filters />
+              <div className="positioned--relative">
+                <Sort />
+                <ProductsList />
+              </div>
+            </div>
+          </main>
         )}
       </>
       <Footer />
