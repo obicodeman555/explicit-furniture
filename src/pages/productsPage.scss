@@ -1,0 +1,16 @@
+.allProducts {
+  background: #e0e4ee;
+  padding-top: 95px;
+}
+
+.allProducts__container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.positioned--relative {
+  position: relative;
+}

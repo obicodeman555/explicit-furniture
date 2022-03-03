@@ -10,9 +10,9 @@ const Product = ({ image, name, price, id }) => {
         <div className="product__imageBox">
           <img src={image} alt="" />
         </div>
-        <div className="product__price">
-          <span className="price__name">{name}</span>
-          <span className="price__amount">{formatPrice(price)}</span>
+        <div className="product__details">
+          <span className="product__name">{name}</span>
+          <span className="product__amount">{formatPrice(price)}</span>
         </div>
         <PrimaryLink linkText="Product details" to={`products/${id}`} />
       </div>

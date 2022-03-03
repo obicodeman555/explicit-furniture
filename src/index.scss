@@ -20,6 +20,9 @@ $color-blue: #04194f;
 $font-primary: 1.145rem;
 $font-weight600: 600;
 
+$scrollbar-color: rgba(0, 0, 0, 0.25);
+$scrollbar-bg: transparent;
+
 /*
 =============== 
 Global Styles
@@ -156,4 +159,19 @@ a:active {
 
 .colored--blue {
   color: $color-blue;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: $scrollbar-bg;
+  &-thumb {
+    border-radius: 10px;
+    border: 2px auto;
+    border: 2px solid $scrollbar-bg;
+    background: $scrollbar-color;
+  }
+
+  &-track {
+    border-radius: 10px;
+  }
 }

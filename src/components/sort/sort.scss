@@ -1,0 +1,158 @@
+@use "../../sass/mixins" as mixin;
+
+.sort {
+  background-color: #fff;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 70px;
+}
+
+.sort__container {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  column-gap: 1em;
+}
+
+.sortby__layout {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  & > button {
+    background-color: transparent;
+    border: 1px solid rgba(75, 236, 196, 0.329);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0.65em;
+
+    &.active {
+      box-shadow: 0 0 0 4px lighten(#2c6c49, 50%);
+    }
+  }
+
+  small {
+    font-weight: 700;
+    color: #2c6c49;
+  }
+}
+
+.itemfound__indicator {
+  display: inline-flex;
+  gap: 0.25em;
+
+  span:first-child {
+    font-weight: 600;
+    color: #2c6c49;
+  }
+
+  span:last-child {
+    font-weight: 600;
+    color: #888;
+  }
+}
+
+.searchInputBox {
+  display: flex;
+  align-items: stretch;
+  background-color: #efefef;
+  margin: 0 auto;
+  min-width: 407px;
+  overflow: hidden;
+  border-radius: 30px;
+
+  & > svg {
+    width: 20px;
+  }
+
+  &:focus-within {
+    transition: box-shadow 0.75s ease-in-out;
+
+    box-shadow: 0 0 0 4px lighten(#2c6c49, 50%);
+  }
+}
+
+.search__input {
+  width: calc(0.9 * 407px);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1.15em;
+  text-indent: 20px;
+  outline: none;
+}
+
+//give svgs fixed width
+svg {
+  width: 25px;
+  path {
+    stroke: #2c6c49;
+  }
+}
+
+.sort__dropDown {
+  display: flex;
+  align-items: center;
+
+  //label
+  label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #888;
+    margin-right: 0.5em;
+  }
+  //select dropdown containr
+  .sort__select {
+    padding: 0.75em;
+    border: 0;
+    border-radius: 30px;
+    background-color: #efefef;
+
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    width: 150px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+
+    &:focus-within,
+    &:hover {
+      transition: box-shadow 0.75s ease-in-out;
+      box-shadow: 0 0 0 4px lighten(#2c6c49, 50%);
+    }
+    &::after {
+      content: "▽";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+      pointer-events: none;
+      color: #000;
+      padding: 0.65em;
+    }
+  }
+
+  //select drop down
+  #sort {
+    border: 0;
+    background-color: transparent;
+    flex: 1;
+    outline: none;
+    //replace default styling (arroe)
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+  }
+}

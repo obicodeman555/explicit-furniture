@@ -1,5 +1,5 @@
 .nav {
-  background-color: #000;
+  background-color: #304153;
   position: fixed;
   top: 0;
   left: 0;
@@ -45,6 +45,7 @@
 }
 
 .navBurger__icon {
+  display: none;
   &Button {
     display: flex;
     background-color: transparent;
@@ -60,28 +61,36 @@
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1024px) {
   #navBar__cartLink,
   #navBar__accountBtn,
   #navBar__marketLink {
     display: none;
   }
 
+  .nav {
+    background-color: red;
+  }
+
   .navBurger__icon {
     display: block;
   }
 }
-@media screen and (min-width: 992px) {
-  #navBar__cartLink,
-  #navBar__marketLink {
-    display: block;
-  }
+// @media screen and (min-width: 1024px) {
+//   #navBar__cartLink,
+//   #navBar__marketLink {
+//     display: block;
+//   }
 
-  #navBar__accountBtn {
-    display: flex;
-  }
+//   #navBar__accountBtn {
+//     display: flex;
+//   }
 
-  .navBurger__icon {
-    display: none;
-  }
-}
+//   .navBurger__icon {
+//     display: none;
+//   }
+
+//   .nav {
+//     background-color: blue;
+//   }
+// }

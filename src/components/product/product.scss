@@ -6,7 +6,7 @@
 
   & > img {
     width: 100%;
-    height: 100%;
+    height: inherit;
     object-fit: cover;
   }
 }
@@ -37,17 +37,18 @@
   }
 }
 
-.product__price {
+.product__details {
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
 
-  .price__name {
-    color: rgb(130, 127, 127);
-    font-weight: 450;
+  .product__name {
+    color: rgb(12, 180, 6);
+    font-weight: 550;
+    font-size: calc(100% + 2px);
   }
 
-  .price__amount {
+  .product__amount {
     font-weight: 600;
     font-size: calc(100% + 5px);
   }
