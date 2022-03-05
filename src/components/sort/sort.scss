@@ -36,6 +36,7 @@
 
     &.active {
       box-shadow: 0 0 0 4px lighten(#2c6c49, 50%);
+      transition: box-shadow 0.5s ease-in-out;
     }
   }
 

@@ -4,12 +4,22 @@ import { useFilterContext } from "../../context/filter_context";
 import React from "react";
 
 const Sort = () => {
-  const { filtered_products: products, grid_view } = useFilterContext();
+  const {
+    filtered_products: products,
+    grid_view,
+    setGridView,
+    setListView,
+    updateSort,
+    sort,
+  } = useFilterContext();
   return (
     <div className="sort">
       <div className="sort__container">
         <div className="sortby__layout">
-          <button className={`${grid_view ? "active" : null}`}>
+          <button
+            className={`${grid_view ? "active" : null}`}
+            onClick={setGridView}
+          >
             <svg
               width="40"
               height="40"
@@ -48,7 +58,10 @@ const Sort = () => {
             </svg>
             <small>Grid</small>
           </button>
-          <button className={`${!grid_view ? "active" : null}`}>
+          <button
+            className={`${!grid_view ? "active" : null}`}
+            onClick={setListView}
+          >
             <svg
               width="40"
               height="40"
@@ -90,14 +103,17 @@ const Sort = () => {
         <form className="sort__dropDown">
           <label htmlFor="sort">Sort by</label>
           <span className="sort__select">
-            <select name="sort" id="sort" className="sort-input">
-              <option selected disabled>
-                price and name
-              </option>
+            <select
+              name="sort"
+              id="sort"
+              className="sort-input"
+              onChange={updateSort}
+              value={sort}
+            >
               <option value="price-lowest">Price (Lowest)</option>
-              <option value="price-highest">Price (Higest)</option>
-              <option value="name-a">Name (Higest)</option>
-              <option value="name-z">Name (Higest)</option>
+              <option value="price-highest">Price (Highest)</option>
+              <option value="name-a">Name (a-z)</option>
+              <option value="name-z">Name (A-Z)</option>
             </select>
           </span>
         </form>
