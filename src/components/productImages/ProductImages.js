@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FcNext, FcPrevious } from "react-icons/fc";
 import "./productImages.scss";
 
@@ -6,17 +6,18 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
   const [main, setMain] = useState(images[0]);
   const [counter, setCounter] = useState(0);
 
-  let lastIndex = images.length - 1;
+  useEffect(() => {
+    let lastIndex = images.length - 1;
 
-  const moveToNextImage = () => {
-    setCounter(counter === lastIndex ? 0 : counter + 1);
-    setMain(images[counter]);
-  };
+    if (counter < 0) {
+      setCounter(lastIndex);
+    }
 
-  const moveToPreviousImage = () => {
-    setCounter(counter < 1 ? lastIndex : counter - 1);
-    setMain(images[counter]);
-  };
+    if (counter > lastIndex) {
+      setCounter(0);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [counter]);
 
   return (
     <section className="singleProduct__images">
@@ -39,14 +40,22 @@ const ProductImages = ({ images = [{ url: "" }] }) => {
         <img src={main.url} alt="main single product photograph" />
         <div className="slideImage__button__container">
           <button
+            type="button"
             className="sliderToggler sliderToggler--left"
-            onClick={moveToPreviousImage}
+            onClick={() => {
+              setCounter((counter) => counter - 1);
+              setMain(images[counter]);
+            }}
           >
             <FcPrevious />
           </button>
           <button
+            type="button"
             className="sliderToggler sliderToggler--right"
-            onClick={moveToNextImage}
+            onClick={() => {
+              setCounter((counter) => counter + 1);
+              setMain(images[counter]);
+            }}
           >
             <FcNext />
           </button>

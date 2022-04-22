@@ -1,0 +1,103 @@
+@use "../../sass/mixins" as mx;
+
+.sbc__container {
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.header__subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffe5e5;
+  @include mx.pad1;
+
+  //text
+  span {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  svg {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+}
+
+.filter__category,
+.filter__company,
+.filter__color {
+  border-bottom: 1px solid #ffe5e5;
+  @include mx.pad2;
+}
+
+.filter__company {
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+}
+.filter__company > select {
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 450;
+  padding: 0 0.5rem;
+  border: 2px solid rgb(75, 236, 196);
+}
+
+.filter__category,
+.filter__category > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__category > span > button {
+  display: flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 450;
+  color: #6e6c83c5;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: color 1s;
+  width: 150px;
+
+  //hover
+  &:hover {
+    color: rgb(75, 236, 196);
+  }
+
+  //active button
+
+  &.active {
+    box-shadow: inset 5px 5px 5px rgba(217, 218, 217, 0.849),
+      inset -1px -1px 1px rgba(217, 218, 217, 0.527);
+    color: #000;
+    font-weight: 600;
+    border-radius: 5px;
+  }
+}
+
+.filter__color > span {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+
+  & > button:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+.filter__label {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: rgb(75, 236, 196);
+}

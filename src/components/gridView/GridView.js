@@ -7,7 +7,6 @@ const GridView = ({ products }) => {
     <div className="gridview">
       <div className="gridview__container">
         {products?.map((product) => {
-          console.log(product);
           return <Product key={product.id} {...product} />;
         })}
       </div>

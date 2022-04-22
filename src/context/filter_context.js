@@ -4,12 +4,11 @@ import {
   LOAD_PRODUCTS,
   SET_GRIDVIEW,
   UPDATE_SORT,
-  // SORT_PRODUCTS,
-  // UPDATE_FILTERS,
-  // FILTER_PRODUCTS,
+  UPDATE_FILTERS,
   // CLEAR_FILTERS,
   SET_LISTVIEW,
   SORT_PRODUCTS,
+  FILTER_PRODUCTS,
 } from "../actions";
 
 import { useProductsContext } from "./products_context";
@@ -19,6 +18,16 @@ const initialState = {
   all_products: [],
   grid_view: true,
   sort: "price-lowest",
+  filters: {
+    text: "",
+    company: "all",
+    category: "all",
+    color: "all",
+    min_price: 0,
+    max_price: 0,
+    price: 0,
+    shipping: false,
+  },
 };
 const FilterContext = React.createContext();
 
@@ -33,8 +42,9 @@ export const FilterProvider = (props) => {
   }, [products]);
 
   useEffect(() => {
+    dispatch({ type: FILTER_PRODUCTS });
     dispatch({ type: SORT_PRODUCTS });
-  }, [products, state.sort]);
+  }, [products, state.sort, state.filters]);
 
   //function sets grid view of products
   const setGridView = () => {
@@ -46,13 +56,41 @@ export const FilterProvider = (props) => {
     dispatch({ type: SET_LISTVIEW });
   };
 
+  //update state for filtering funtionality
+  const updateFilters = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    //check if button is click
+    //get text content of button clicked
+    if (name === "category") {
+      value = e.target.textContent;
+    }
+
+    if (name === "color") {
+      value = e.target.dataset.color;
+    }
+
+    dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
+  };
+
+  const clearFilters = () => {};
+
+  //update the states for sort functionality
   const updateSort = (e) => {
     const value = e.target.value;
     dispatch({ type: UPDATE_SORT, payload: value });
   };
   return (
     <FilterContext.Provider
-      value={{ ...state, setGridView, setListView, updateSort }}
+      value={{
+        ...state,
+        setGridView,
+        setListView,
+        updateSort,
+        updateFilters,
+        clearFilters,
+      }}
     >
       {props.children}
     </FilterContext.Provider>
