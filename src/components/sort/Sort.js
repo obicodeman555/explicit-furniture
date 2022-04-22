@@ -11,6 +11,8 @@ const Sort = () => {
     setListView,
     updateSort,
     sort,
+    filters: { text },
+    updateFilters,
   } = useFilterContext();
   return (
     <div className="sort">
@@ -82,8 +84,15 @@ const Sort = () => {
           <span>{products.length}</span>
           <span>products found</span>
         </div>
-        <div className="searchInputBox">
-          <input type="text" className="search__input" />
+        <form className="searchInputBox" onSubmit={(e) => e.preventDefault()}>
+          <input
+            type="text"
+            className="search__input"
+            name="text"
+            value={text}
+            placeholder="Search Products"
+            onChange={updateFilters}
+          />
           <>
             <svg
               width="40"
@@ -99,7 +108,7 @@ const Sort = () => {
               />
             </svg>
           </>
-        </div>
+        </form>
         <form className="sort__dropDown">
           <label htmlFor="sort">Sort by</label>
           <span className="sort__select">
