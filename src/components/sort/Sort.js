@@ -5,6 +5,7 @@ import React from "react";
 
 const Sort = () => {
   const {
+    //alias
     filtered_products: products,
     grid_view,
     setGridView,

@@ -19,7 +19,7 @@ const Sidebar = () => {
       className={`${isSidebarOpen ? "sidebar slideIn" : "sidebar slideOut"}`}
     >
       <div className="sidebar__header">
-        <Link className="sidebarLogo__link">
+        <Link className="sidebarLogo__link" to="/">
           <span>
             <img src={logo} alt="seconduser__logo__image" />
           </span>

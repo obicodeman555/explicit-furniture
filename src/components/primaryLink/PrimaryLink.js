@@ -4,7 +4,10 @@ import "./primaryLink.scss";
 
 const PrimaryLink = (props) => {
   return (
-    <div className="primaryLink__container">
+    <div
+      className={`primaryLink__container ${props.customClass}`}
+      id={props.customId}
+    >
       <Link to={props.to}>{props.linkText}</Link>
     </div>
   );

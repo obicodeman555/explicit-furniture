@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Sidebar, Footer } from "../components";
+
 import FeaturedProducts from "../components/featuredProducts/FeaturedProducts";
 import handshake from "../assets/handshake.svg";
 import settings from "../assets/settings.svg";
@@ -13,9 +13,6 @@ const HomePage = () => {
   return (
     <>
       <div className="explicitFurnitures">
-        <Navbar />
-
-        <Sidebar />
         <main className="main__container">
           <section className="hero__one__container">
             <div className="hero__content">
@@ -170,7 +167,6 @@ const HomePage = () => {
         </main>
       </div>
       <FeaturedProducts />
-      <Footer />
     </>
   );
 };

@@ -5,7 +5,7 @@ import {
   SET_GRIDVIEW,
   UPDATE_SORT,
   UPDATE_FILTERS,
-  // CLEAR_FILTERS,
+  CLEAR_FILTERS,
   SET_LISTVIEW,
   SORT_PRODUCTS,
   FILTER_PRODUCTS,
@@ -71,10 +71,20 @@ export const FilterProvider = (props) => {
       value = e.target.dataset.color;
     }
 
+    if (name === "price") {
+      value = Number(value);
+    }
+
+    if (name === "shipping") {
+      value = e.target.checked;
+    }
+
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   };
 
-  const clearFilters = () => {};
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS });
+  };
 
   //update the states for sort functionality
   const updateSort = (e) => {

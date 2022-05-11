@@ -1,24 +1,23 @@
 import React from "react";
 import "./filters.scss";
 import { useFilterContext } from "../../context/filter_context";
-import { getUniqueValues } from "../../utils/helpers";
+import { getUniqueValues, formatPrice } from "../../utils/helpers";
 import { FaCheck } from "react-icons/fa";
 
 const Filters = () => {
   const {
     filters: {
-      // text,
       category,
       company,
       color,
-      // min_price,
-      // price,
-      // max_price,
-      // shipping,
+      min_price,
+      price,
+      max_price,
+      shipping,
     },
 
     updateFilters,
-    // clearFilters,
+    clearFilters,
     all_products,
   } = useFilterContext();
 
@@ -87,6 +86,20 @@ const Filters = () => {
             <label className="filter__label">Colors</label>
             <span>
               {colors.map((c, index) => {
+                if (c === "all") {
+                  return (
+                    <button
+                      name="color"
+                      className={`${
+                        color === "all" ? "all-btn active" : "all-btn"
+                      }`}
+                      onClick={updateFilters}
+                      data-color="all"
+                    >
+                      All
+                    </button>
+                  );
+                }
                 return (
                   <button
                     key={index}
@@ -103,6 +116,39 @@ const Filters = () => {
                 );
               })}
             </span>
+          </div>
+          <div className="filter__price">
+            <label className="filter__label">Price</label>
+            <span>{formatPrice(price)}</span>
+            <input
+              type="range"
+              name="price"
+              onChange={updateFilters}
+              min={min_price}
+              max={max_price}
+              value={price}
+            />
+          </div>
+          <div className="filter__checked__clearAll">
+            <div className="filter__checked">
+              <label htmlFor="free-shipping">Free Shipping</label>
+              <input
+                type="checkbox"
+                name="shipping"
+                id="free-shipping"
+                onChange={updateFilters}
+                checked={shipping}
+              />
+            </div>
+            <div className="clearFilter__btn__container">
+              <button
+                type="button"
+                className="clearFilter__ctaBtn"
+                onClick={clearFilters}
+              >
+                Clear All Filters
+              </button>
+            </div>
           </div>
         </div>
       </div>

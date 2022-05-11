@@ -5,9 +5,9 @@ import "./checkoutLink.scss";
 const CheckoutLink = (props) => {
   return (
     <div className={`checkout ${props.className}`} id={props.id}>
-      <Link className="font__primary w600">
+      <Link className="font__primary w600" to="/checkout">
         <span className="image__box">
-          <img src={checkout} alt="checkout icon" srcset="" />
+          <img src={checkout} alt="checkout icon" />
         </span>
         <span className="large--text">Checkout</span>
       </Link>

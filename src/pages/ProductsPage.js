@@ -1,11 +1,4 @@
-import {
-  Sidebar,
-  Navbar,
-  Footer,
-  ProductsList,
-  Filters,
-  Sort,
-} from "../components";
+import { Sidebar, Navbar, ProductsList, Filters, Sort } from "../components";
 import { useProductsContext } from "../context/products_context";
 import Loading from "../components/loading";
 import Error from "../components/error";
@@ -40,7 +33,6 @@ const ProductsPage = () => {
           </main>
         )}
       </>
-      <Footer />
     </>
   );
 };
