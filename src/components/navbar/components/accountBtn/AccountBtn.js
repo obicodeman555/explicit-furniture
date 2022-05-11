@@ -11,7 +11,7 @@ const AccountBtn = (props) => {
         </span>
         <span className="account__text font__primary w600">Account</span>
         <span className="chevronDown__icon">
-          <img src={chevronDown} alt="chevron_down icon" srcset="" />
+          <img src={chevronDown} alt="chevron_down icon" />
         </span>
       </button>
     </div>

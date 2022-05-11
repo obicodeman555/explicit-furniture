@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
+import { useCartContext } from "../../context/cart_context";
 import PrimaryButton from "../primaryButton/PrimaryButton";
+import QuantityStepper from "../quantityStepper/QuantityStepper";
 //css stylesheet
 import "./atc.scss";
 
 //functional component
 const AddToCart = ({ product }) => {
-  const { stock, colors } = product;
+  const { addToCart } = useCartContext();
+  const { id, stock, colors } = product;
+
+  const [quantity, setQuantity] = useState(1);
 
   const [mainColor, setMainColor] = useState(colors[0]);
-  const [quantity, setQuantity] = useState(1);
 
   //increase quantity
   const increase = () => {
@@ -36,6 +40,7 @@ const AddToCart = ({ product }) => {
       return newQuantity;
     });
   };
+
   return (
     <div>
       <div className="color">
@@ -57,39 +62,17 @@ const AddToCart = ({ product }) => {
           })}
         </span>
       </div>
-
       <div className="singleProduct__cta">
-        <div class="quantity">
-          <button
-            type="button"
-            className="plus quantity__button"
-            onClick={increase}
-          >
-            +
-          </button>
-          <input
-            type="number"
-            className="quantity__inputText"
-            step="1"
-            min="1"
-            max="15"
-            name="quantity"
-            value={quantity}
-            title="Qty"
-            size="4"
-            placeholder=""
-            inputmode="numeric"
-            disabled
-          />
-          <button
-            type="button"
-            className="minus quantity__button"
-            onClick={decrease}
-          >
-            -
-          </button>
-        </div>
-        <PrimaryButton buttonText="add to cart" />
+        <QuantityStepper
+          quantity={quantity}
+          increase={increase}
+          decrease={decrease}
+        />
+        <PrimaryButton
+          type="button"
+          buttonText="add to cart"
+          onClick={() => addToCart(id, mainColor, quantity, product)}
+        />
       </div>
     </div>
   );

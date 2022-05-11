@@ -14,7 +14,8 @@ import Sort from "./sort/Sort";
 import Filters from "./filters/Filters";
 import ListView from "./listView/ListView";
 import GridView from "./gridView/GridView";
-
+import QuantityStepper from "./quantityStepper/QuantityStepper";
+import CartItem from "./cartItem/CartItem";
 //exports
 export {
   Footer,
@@ -33,4 +34,6 @@ export {
   Filters,
   ListView,
   GridView,
+  QuantityStepper,
+  CartItem,
 };

@@ -175,3 +175,22 @@ a:active {
     border-radius: 10px;
   }
 }
+a,
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.text-bold-600 {
+  font-weight: 600;
+}
+
+.light-bordered-bottom {
+  border-bottom: 1px solid #f1f1f2;
+}

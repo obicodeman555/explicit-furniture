@@ -1,4 +1,5 @@
 import React from "react";
+import { Sidebar, Navbar, Footer } from "./components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   Home,
@@ -14,6 +15,8 @@ import {
 function App() {
   return (
     <Router>
+      <Navbar />
+      <Sidebar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
@@ -23,6 +26,7 @@ function App() {
         <Route exact path="/checkout" component={Checkout} />
         <Route path="*" component={Error} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

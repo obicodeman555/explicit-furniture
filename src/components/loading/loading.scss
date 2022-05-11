@@ -1,33 +1,40 @@
 .loading {
   position: fixed;
+  z-index: 9999999;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+}
+
+.gears {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotating__gear {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #212d52;
-  z-index: 100;
+  position: relative;
+  width: 70px;
+  max-width: 100px;
+  animation: rotate 1s infinite;
+  animation-fill-mode: backwards;
 
-  .gears {
-    position: relative;
-  }
-
-  .rotating__gear {
-    position: absolute;
-    display: flex;
-    animation: spinaround 5s infinite;
-    animation-fill-mode: both;
-
-    &:nth-child(1) {
-      top: -3rem;
-      right: -8.5rem;
-    }
+  & > img {
+    width: 100%;
   }
 }
 
-@keyframes spinaround {
+.rotating__gear:nth-child(1) {
+  left: 55px;
+  top: 23px;
+}
+
+@keyframes rotate {
   to {
     transform: rotate(360deg);
   }

@@ -28,7 +28,7 @@ const Footer = () => {
 
               <div className="item__about__support">
                 <span>Questions?</span>
-                <Link>support@seconduser.com.ng</Link>
+                <Link to="#">support@seconduser.com.ng</Link>
               </div>
 
               <address className="item__about__address">
@@ -48,15 +48,15 @@ const Footer = () => {
             <div className="item__container">
               <p className="item__title">shop</p>
               <div className="footer__socialLinks">
-                <Link className="animation--shake">
+                <Link className="animation--shake" to="#">
                   Family Furniture Market
                 </Link>
 
-                <Link>Office Furniture Market</Link>
+                <Link to="#">Office Furniture Market</Link>
 
-                <Link>Wholesale</Link>
+                <Link to="#">Wholesale</Link>
 
-                <Link>Special Orders</Link>
+                <Link to="#">Special Orders</Link>
               </div>
             </div>
           </div>
@@ -65,14 +65,14 @@ const Footer = () => {
             <div className="item__container">
               <p className="item__title">Information</p>
               <div className="footer__socialLinks">
-                <Link>Apply and Care</Link>
+                <Link to="#">Apply and Care</Link>
 
-                <Link>Shipping and Returns</Link>
+                <Link to="#">Shipping and Returns</Link>
 
-                <Link>FAQ</Link>
+                <Link to="#">FAQ</Link>
 
-                <Link>Contact us</Link>
-                <Link>Privacy Policy</Link>
+                <Link to="#">Contact us</Link>
+                <Link to="#">Privacy Policy</Link>
               </div>
             </div>
           </div>
@@ -98,8 +98,8 @@ const Footer = () => {
         <div className="footer__lowerContent">
           <div className="footer__lowerContent__container">
             <p className="item__title">Acceptable Payment Methods</p>
-            <ul class="horizontalList">
-              <li class="horizontalList__Item">
+            <ul className="horizontalList">
+              <li className="horizontalList__Item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
@@ -126,7 +126,7 @@ const Footer = () => {
                   </g>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +175,7 @@ const Footer = () => {
                   </g>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   viewBox="0 0 38 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ const Footer = () => {
                   ></path>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   viewBox="0 0 38 24"
                   width="38"
@@ -253,12 +253,12 @@ const Footer = () => {
                       y2="9.104"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#F89F20"></stop>
-                      <stop offset=".25" stop-color="#F79A20"></stop>
-                      <stop offset=".533" stop-color="#F68D20"></stop>
-                      <stop offset=".62" stop-color="#F58720"></stop>
-                      <stop offset=".723" stop-color="#F48120"></stop>
-                      <stop offset="1" stop-color="#F37521"></stop>
+                      <stop stopColor="#F89F20"></stop>
+                      <stop offset=".25" stopColor="#F79A20"></stop>
+                      <stop offset=".533" stopColor="#F68D20"></stop>
+                      <stop offset=".62" stopColor="#F58720"></stop>
+                      <stop offset=".723" stopColor="#F48120"></stop>
+                      <stop offset="1" stopColor="#F37521"></stop>
                     </linearGradient>
                     <linearGradient
                       id="pi-paint1_linear"
@@ -268,15 +268,15 @@ const Footer = () => {
                       y2="6.446"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#F58720"></stop>
-                      <stop offset=".359" stop-color="#E16F27"></stop>
-                      <stop offset=".703" stop-color="#D4602C"></stop>
-                      <stop offset=".982" stop-color="#D05B2E"></stop>
+                      <stop stopColor="#F58720"></stop>
+                      <stop offset=".359" stopColor="#E16F27"></stop>
+                      <stop offset=".703" stopColor="#D4602C"></stop>
+                      <stop offset=".982" stopColor="#D05B2E"></stop>
                     </linearGradient>
                   </defs>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   width="38"
                   height="24"
@@ -297,44 +297,44 @@ const Footer = () => {
                     d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.29 5.672h.035v.874H8.29c-2.256 0-4.165 1.46-4.8 3.472l-.849-.265c.75-2.365 2.995-4.081 5.649-4.081z"
                     fill="url(#pi-paint0_linear)"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.325 6.546v-.874H8.29c2.662 0 4.914 1.728 5.656 4.105l-.848.266c-.624-2.014-2.523-3.482-4.773-3.497z"
                     fill="url(#pi-paint1_linear)"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M11.243 15.478l.523.708a5.96 5.96 0 01-3.476 1.108 5.96 5.96 0 01-3.43-1.075l.524-.708c.82.573 1.823.91 2.906.91 1.104 0 2.124-.35 2.953-.943z"
                     fill="url(#pi-paint2_linear)"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M2.642 9.753l.848.265a4.856 4.856 0 00-.225 1.465c0 1.663.836 3.134 2.119 4.028l-.523.708c-1.453-1.017-2.417-2.663-2.483-4.532v-.407c.019-.53.11-1.042.264-1.527z"
                     fill="url(#pi-paint3_linear)"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M14.205 11.483c0 1.934-.96 3.646-2.44 4.703l-.523-.707a4.904 4.904 0 002.073-3.996c0-.502-.076-.987-.218-1.443l.848-.266c.17.54.26 1.114.26 1.71z"
                     fill="url(#pi-paint4_linear)"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M11.06 12.218c0-.308-.215-.446-.692-.446H9.193v.89h1.175c.485 0 .692-.133.692-.444zm-.857-1.866h-1.01v.89h1.01c.457 0 .664-.138.664-.443 0-.306-.21-.447-.664-.447zm1.474 1.922c0 .594-.474.932-1.31.932H8.64c-.03 0-.05-.02-.05-.049v-3.3c0-.029.02-.048.05-.048h1.575c.813 0 1.26.313 1.26.878 0 .335-.15.604-.583.733.548.114.77.437.785.854zM7.872 9.857v.461c0 .03-.02.049-.05.049h-2v.861h1.66c.03 0 .049.02.049.049v.46c0 .03-.02.05-.05.05H5.823v1.37c0 .03-.02.049-.05.049H5.27c-.03 0-.05-.02-.05-.049v-3.3c0-.029.02-.048.05-.048h2.553c.03 0 .05.02.05.048z"
                     fill="#64717D"
                   ></path>
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M31.214 9.82a49.278 49.278 0 001.688 4.454l1.55-4.454h1.239l-2.221 5.754c-.284.737-.621 1.305-1.011 1.705-.39.4-.913.6-1.568.6-.163 0-.317-.013-.46-.039v-1.005c.12.019.227.028.317.028.398 0 .722-.11.972-.332.25-.221.47-.546.659-.974a45.905 45.905 0 01-1.312-2.824 80.59 80.59 0 01-1.17-2.913h1.317zm-4.6-.134c.696 0 1.256.197 1.68.591.425.395.637.985.637 1.77V15.4h-1.09v-.91c-.22.328-.503.58-.847.757a2.542 2.542 0 01-1.176.265c-.599 0-1.064-.152-1.395-.455-.331-.303-.497-.703-.497-1.197 0-.491.187-.903.56-1.234.373-.33.968-.497 1.786-.497h1.545v-.016c0-.938-.439-1.407-1.317-1.407-.368 0-.677.065-.93.196-.251.13-.455.312-.61.547l-.778-.62c.242-.368.561-.651.957-.848a2.985 2.985 0 011.35-.296h.124zM20.16 7.588c.996 0 1.74.233 2.232.7.492.467.739 1.1.739 1.9 0 .797-.247 1.43-.739 1.898-.492.469-1.236.703-2.232.703h-2.136v2.612H16.83V7.588h3.329zm7.657 5.419h-1.5c-.446 0-.765.07-.957.21a.665.665 0 00-.286.566c0 .49.33.736.994.736.439 0 .804-.097 1.096-.293.292-.195.51-.46.653-.795v-.424zm-7.77-4.326h-2.023v3.014h2.022c.648 0 1.12-.125 1.418-.377.297-.25.445-.627.445-1.13 0-.502-.148-.879-.445-1.13-.298-.251-.77-.377-1.418-.377z"
                     fill="#1B2529"
                   ></path>
@@ -347,8 +347,8 @@ const Footer = () => {
                       y2="10.121"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#24D365"></stop>
-                      <stop offset="1" stop-color="#139DBD"></stop>
+                      <stop stopColor="#24D365"></stop>
+                      <stop offset="1" stopColor="#139DBD"></stop>
                     </linearGradient>
                     <linearGradient
                       id="pi-paint1_linear"
@@ -358,9 +358,9 @@ const Footer = () => {
                       y2="10.111"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#23D068"></stop>
-                      <stop offset=".52" stop-color="#EACD36"></stop>
-                      <stop offset="1" stop-color="#FF6C5C"></stop>
+                      <stop stopColor="#23D068"></stop>
+                      <stop offset=".52" stopColor="#EACD36"></stop>
+                      <stop offset="1" stopColor="#FF6C5C"></stop>
                     </linearGradient>
                     <linearGradient
                       id="pi-paint2_linear"
@@ -370,8 +370,8 @@ const Footer = () => {
                       y2="15.876"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#266FF3"></stop>
-                      <stop offset="1" stop-color="#C439D6"></stop>
+                      <stop stopColor="#266FF3"></stop>
+                      <stop offset="1" stopColor="#C439D6"></stop>
                     </linearGradient>
                     <linearGradient
                       id="pi-paint3_linear"
@@ -381,8 +381,8 @@ const Footer = () => {
                       y2="10.39"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#266FF3"></stop>
-                      <stop offset="1" stop-color="#149FBA"></stop>
+                      <stop stopColor="#266FF3"></stop>
+                      <stop offset="1" stopColor="#149FBA"></stop>
                     </linearGradient>
                     <linearGradient
                       id="pi-paint4_linear"
@@ -392,13 +392,13 @@ const Footer = () => {
                       y2="15.394"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#FF6C5C"></stop>
-                      <stop offset="1" stop-color="#C439D6"></stop>
+                      <stop stopColor="#FF6C5C"></stop>
+                      <stop offset="1" stopColor="#C439D6"></stop>
                     </linearGradient>
                   </defs>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
@@ -439,7 +439,7 @@ const Footer = () => {
                   ></path>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   viewBox="0 0 38 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -465,7 +465,7 @@ const Footer = () => {
                   ></path>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   viewBox="0 0 38 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -497,7 +497,7 @@ const Footer = () => {
                   ></path>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   role="img"
@@ -522,7 +522,7 @@ const Footer = () => {
                   ></path>
                 </svg>
               </li>
-              <li class="horizontalList__Item">
+              <li className="horizontalList__Item">
                 <svg
                   viewBox="0 0 38 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -554,8 +554,8 @@ const Footer = () => {
               </span>
 
               <span>
-                All Rights Reserved. <Link>Terms and Conditions</Link>
-                <Link>Privacy Policy.</Link>
+                All Rights Reserved. <Link to="#">Terms and Conditions</Link>
+                <Link to="#">Privacy Policy.</Link>
               </span>
             </div>
           </div>
